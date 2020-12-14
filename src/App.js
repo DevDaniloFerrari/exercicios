@@ -1,12 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import CompPadrao, { Comp1, Comp2 } from './components/Multi'
 import Primeiro from './components/Primeiro'
 
 export default () => {
     return (
-        <View>
+        <View style={style.App}>
             <CompPadrao />
             <Comp1/>
             <Comp2/>
@@ -14,3 +14,11 @@ export default () => {
         </View>
     );
 }
+
+const style = StyleSheet.create({
+    App: {
+        flexGrow: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+});
